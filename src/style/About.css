@@ -1,0 +1,68 @@
+.about-section {
+    display: flex;
+    padding: 0px;
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #20232a;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .about-section.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px; /* Control the max width of the entire container */
+    padding: 20px;
+  }
+  
+  .tabs-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tab {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .tab-button {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .tab-button:hover,
+  .tab-button.active {
+    color: #3498db;
+    background-color: #333;
+  }
+  
+  .tab-content {
+    padding: 1rem;
+    border-radius: 8px;
+    background: #424949;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }

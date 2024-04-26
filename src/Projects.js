@@ -30,7 +30,7 @@ const Projects = () => {
   
   return (
     <div id="projects" className="section">
-      <h2>Projects</h2>
+      <h2 className="header">Projects</h2>
       <div className="section-container">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />

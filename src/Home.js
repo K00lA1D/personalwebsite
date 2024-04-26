@@ -4,7 +4,7 @@ import './style/SectionStyles.css'
 const Home = () => {
   return (
     <section id="home" className="section">
-      <h1>Welcome to My Homepage</h1>
+      <h1 className="header">Hi! I'm Sid Nair</h1>
       {/* Additional content */}
     </section>
   );

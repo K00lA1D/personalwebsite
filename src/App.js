@@ -5,6 +5,8 @@ import About from './About';
 import WorkExperience from './WorkExperience';
 import Projects from './Projects';
 import Contact from './Contact';
+import Footer from './Footer';
+import './style/App.css'
 
 const App = () => {
   const scrollToSection = (sectionId) => {
@@ -28,6 +30,7 @@ const App = () => {
         <WorkExperience />
         <Projects />
         <Contact />
+        <Footer />
       </main>
     </div>
   );

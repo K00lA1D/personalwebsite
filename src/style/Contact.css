@@ -1,0 +1,53 @@
+/* Contact.css */
+
+.contact-section {
+    display: flex;
+    flex-direction :column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #20232a;
+}
+  
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%; /* Adjust width as needed */
+    max-width: 600px; /* Adjust maximum width as needed */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: #333;
+}
+
+.contact-info, .contact-form {
+    width: 100%;
+    text-align: center;
+}
+
+.contact-info p, .social-links a {
+    font-size: 1.25em; /* Larger text */
+    margin: 10px 0;
+}
+
+.social-links a {
+    margin: 0 5px;
+}
+
+.social-links {
+    font-size: 1.5em; /* Larger icons */
+}
+
+/* Animations */
+.contact-section {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.contact-section.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+  

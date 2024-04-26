@@ -4,7 +4,7 @@ import './style/SectionStyles.css'
 const NavBar = ({ scrollToSection }) => {
   return (
     <div className = "section">
-      <nav className="Navbar">
+      <nav className="NavBar">
       <button onClick={() => scrollToSection('home')}>Home</button>
       <button onClick={() => scrollToSection('about')}>About</button>
       <button onClick={() => scrollToSection('work-experience')}>Work Experience</button>
