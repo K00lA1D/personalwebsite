@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import './style/About.css';
-import profileImage from './loadstar_logo.png';
+import profileImage from './profilepic.jpg';
 import { useInView } from 'react-intersection-observer';
 
-const TabContent = ({ title, content }) => (
+const TabContent = ({content }) => (
   <>
-    <h3 style={{ color: '#3498db', fontSize: '1.5em', marginBottom: '0.5em' }}>{title}</h3>
     <p>{content}</p>
   </>
 );
@@ -18,52 +17,47 @@ const About = () => {
   });
 
   const tabs = {
-    about: {
-      title: "About me",
-      content: "Third year undergraduate computer engineering student"
-    },
     skills: {
-      title: "Technical Skills",
       content: "Proficient in Python, JavaScript, and other programming languages..."
     },
     experience: {
-      title: "Professional Experience",
       content: "Worked as a developer in various projects involving complex backend systems..."
     },
     education: {
-      title: "Educational Background",
       content: "Completed a degree in Computer Science with a focus on software engineering..."
     },
     projects: {
-      title: "Recent Projects",
       content: "Developed an award-winning app that solves real-world problems..."
     }
   };
 
   return (
-    <section id="about" className={`about-section ${inView ? 'visible' : ''}`} ref={ref}>
-      <div className="container">
-        <div className="tabs-container">
-          <div className="tab">
+    <section id="about" className={`About ${inView ? 'visible' : ''}`} ref={ref}>
+      <div className="About-Container">
+        <div className="Tabs-Container">
+
+          <p> My name is Sid and I'm a third year undergraduate student
+            majoring in Computer Engineering at UCSD.
+          </p>
+          <div className="Tab">
             {Object.keys(tabs).map((tab) => (
               <button
                 key={tab}
-                className={`tab-button ${activeTab === tab ? 'active' : ''}`}
+                className={`Tab-Button ${activeTab === tab ? 'active' : ''}`}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
               </button>
             ))}
           </div>
-          <div className="tab-content">
+          <div className="Tab-Content">
             <TabContent
-              title={tabs[activeTab].title}
               content={tabs[activeTab].content}
             />
           </div>
         </div>
-        <div className="image-container">
-          <img src={profileImage} alt="Profile image" className="responsive-image"/>
+        <div className="Image-Container">
+          <img src={profileImage} alt="Profile image" className="Responsive-Image"/>
         </div>
       </div>
     </section>

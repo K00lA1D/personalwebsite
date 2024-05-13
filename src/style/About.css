@@ -1,68 +1,99 @@
-.about-section {
-    display: flex;
-    padding: 0px;
-    text-align:center;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    background-color: #20232a;
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-  }
-  
-  .about-section.visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  
-  .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 1200px; /* Control the max width of the entire container */
-    padding: 20px;
-  }
-  
-  .tabs-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .tab {
-    display: flex;
-    margin-bottom: 1rem;
-  }
-  
-  .tab-button {
-    background: none;
-    border: none;
-    color: inherit;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .tab-button:hover,
-  .tab-button.active {
-    color: #3498db;
-    background-color: #333;
-  }
-  
-  .tab-content {
-    padding: 1rem;
-    border-radius: 8px;
-    background: #424949;
-  }
-  
-  .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .responsive-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
+.About {
+  display: flex;
+  padding: 0px 100px 100px 100px;
+  text-align:center;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  width: 100hv;
+  background-color: transparent;
+  opacity: 0;
+  transform: translateX(-300px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.About.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.About-Container .Intro-Text {
+  font-size: 1.5em;  /* Larger text size */
+  color: #00BFFF;  /* Bright blue color */
+}
+
+.About-Container p {
+  font-size: 1.2em;  /* Slightly larger text size */
+  color: white;  /* Bright blue color */
+}
+
+.About-Container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Increased space for text, reduced for image */
+  gap: 2rem;
+  padding: 20px;
+}
+
+.Tabs-Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.About-Header{
+  font-size: 60px;
+}
+
+
+.Tab {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.Tab-Button {
+  background: none;
+  border: none;
+  color: inherit; /* Keeps the button text color consistent with the theme */
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative; /* Needed for positioning the ::after pseudo-element */
+  overflow: hidden; /* Keeps the pseudo-element within the button bounds */
+}
+
+.Tab-Button::after {
+  content: '';
+  position: absolute;
+  height: 2px; /* Height of the underline */
+  left: 0;
+  bottom: 0; /* Positioning the underline at the bottom of the button */
+  width: 0;
+  background: #3498db; /* Using the hover color for the underline */
+  transition: width 0.3s ease; /* Animation effect timing */
+  transform-origin: left; /* Starts the animation from the left */
+}
+
+.Tab-Button:hover::after, .Tab-Button.active::after {
+  width: 100%; /* Expands the underline across the button width on hover */
+}
+
+.Tab-Button:hover, .Tab-Button.active {
+  color: #3498db; /* Changes text color on hover and when active */
+}
+.Tab-Content {
+  padding: 1rem;
+  border-radius: 8px;
+  background: #424949;
+  min-height: 300px; /* Adjust based on your content to prevent resizing */
+}
+
+.Image-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Responsive-Image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './NavBar';
+import NavBar from './NavBar';
 import Home from './Home';
 import About from './About';
 import WorkExperience from './WorkExperience';
@@ -23,15 +23,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <Navbar scrollToSection={scrollToSection} />
-      <main>
-        <Home />
-        <About />
-        <WorkExperience />
-        <Projects />
-        <Contact />
-        <Footer />
-      </main>
+      <NavBar scrollToSection={scrollToSection} />
+      <Home />
+      <About />
+      <WorkExperience />
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 }

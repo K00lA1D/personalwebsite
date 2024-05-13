@@ -1,25 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 .NavBar {
-    background: #333;
-    color: #fff;
+    color: #00BFFF; /* Dark blue for text */
     padding: 1rem;
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
-    /* Rest of your styling */
-  }
-  
-  .NavBar button {
+    justify-content: space-between;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.NavBar button {
     background: none;
     border: none;
-    color: #fff;
+    color: inherit; /* Inherits text color */
     margin: 0 1rem;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     cursor: pointer;
-  }
-  
-  .NavBar button:hover {
-    color: #e63946;
-  }
+    position: relative;
+    overflow: hidden;
+}
+
+.NavBar button::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background: #00BFFF; /* Use the inherited text color */
+    transition: width .2s;
+}
+
+.NavBar button:hover::after {
+    width: 100%;
+}

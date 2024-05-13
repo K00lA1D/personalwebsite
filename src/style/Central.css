@@ -1,0 +1,10 @@
+.section {
+    text-align: center;
+    padding: 0px;
+    background: #20232a;
+    color: white;
+    gap: 20px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}

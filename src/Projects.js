@@ -1,9 +1,14 @@
 import React from 'react';
-import './style/SectionStyles.css'
+import './style/Projects.css'
 import navucsd from './nav_ucsd.png'
-import ProjectCard from './ProjectCard.js'; // Make sure the path is correct
+import { useInView } from 'react-intersection-observer';
 
 const Projects = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1  
+  });
+
   const projects = [
     {
       title: 'Navigate UCSD',
@@ -29,9 +34,9 @@ const Projects = () => {
   ];
   
   return (
-    <div id="projects" className="section">
-      <h2 className="header">Projects</h2>
-      <div className="section-container">
+    <div id="projects" className={`Project ${inView ? 'visible' : ''}`}  ref={ref}>
+      <h2 className="Project-Header">Projects</h2>
+      <div className="Project-Container">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
@@ -39,6 +44,26 @@ const Projects = () => {
     </div>
   );
 };
+
+const ProjectCard = ({ project }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1  
+  });
+
+  return (
+    <a href={project.link} className="Project-Card-Link" ref={ref}>
+      <div className={`Project-Card ${inView ? 'visible' : ''}`} ref={ref}>
+        <div className="Project-Content">
+            <h3 className="Project-Header">{project.title}</h3>
+            <p>{project.description}</p>
+        </div>
+        <img src={project.image} alt={`${project.title} image`} className="Project-Image"/>
+      </div>
+    </a>
+  );
+};
+
 
 export default Projects;
   

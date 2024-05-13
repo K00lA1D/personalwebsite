@@ -1,62 +1,90 @@
-.section {
-    text-align: center;
-    padding: 50px;
-    background: #20232a;
-    color: white;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.work-experience{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.WorkExperience{
+    text-align: left;
+    padding: 0px 100px 100px 100px;
+    background: transparent;
+    color: #00BFFF;
     gap: 20px;
+    opacity: 0;
+    transform: translateX(300px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
+.WorkExperience.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
 
-.work-experience-card {
+.WorkExperience-Header{
+    font-size: 30px;
+    color: white;
+    padding: 0px 0px 25px 0px;
+}
+
+.WorkExperience-SubHeader{
+    font-size: 15px;
+    color: #00BFFF;
+    padding: 0px 0px 25px 0px;
+}
+
+.WorkExperience-Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates a responsive number of column tracks */
+    grid-template-rows: minmax(100px, auto);
+    gap: 20px; 
+    align-items: stretch;
+}
+
+.WorkExperience-Card-Link {
+    text-decoration: none;
+    color: inherit; 
+    display: block; 
+}
+
+.WorkExperience-Card {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    background: #333;
+    background: #002244;
     border-radius: 10px;
-    overflow: hidden;
-    margin: 10px;
-    text-decoration: none;
     color: white;
-    transition: transform 0.3s ease;
-    width: calc(50% - 20px); /* For 2 per row */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: popIn 0.5s ease forwards;
-}
-
-.work-experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.company-logo {
-    /* Assuming a square logo */
-    width: 100px; /* Set this to the size you want */
-    height: 100px; /* Set this to the size you want */
-    margin-right: 20px;
-    border-radius: 50%; /* Makes the image round */
-    object-fit: cover; /* Ensures the logo covers the area */
-    background: #eee; /* Placeholder background color */
-}
-  
-.work-experience-info {
+    opacity: 0;
+    transform: translateX(300px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, box-shadow 0.3s ease-out;
     padding: 20px;
-    text-align: left;
 }
 
-@media (max-width: 768px) {
-    .work-experience-card {
-        flex-direction: column;
-        text-align: center;
-    }
+.WorkExperience-Card.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
 
-    .company-logo {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
+.WorkExperience-Card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 5px 5px rgba(0, 191, 255, 0.6); 
+}
+
+.WorkExperience-Image{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.WorkExperience-Content{
+    overflow: hidden;
+    color: white;
+}
+
+
+.WorkExperience-Link{
+    background: none;
+    border: none;
+    color: inherit; 
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
