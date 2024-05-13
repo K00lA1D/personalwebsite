@@ -1,6 +1,8 @@
 import React from 'react';
 import './style/Projects.css'
-import navucsd from './nav_ucsd.png'
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import navucsd from './NavUCSD.png'
 import { useInView } from 'react-intersection-observer';
 
 const Projects = () => {
@@ -12,24 +14,21 @@ const Projects = () => {
   const projects = [
     {
       title: 'Navigate UCSD',
+      subtitle: 'Full-Stack Application',
       tag: 'something',
       description: `Web based application for navigate UCSD given schedule`,
       image: navucsd,
-      link: "https://navigateucsd-hojmf88c8-sid-nairs-projects.vercel.app/",
+      link: "https://navigateucsd.com/",
+      githublink: "https://github.com/K00lA1D/navigateucsd"
     },
     {
-      title: 'Navigate UCSD',
-      tag: 'something',
-      description: `Web based application for navigate UCSD given schedule`,
-      image: navucsd,
-      link: "https://navigateucsd-hojmf88c8-sid-nairs-projects.vercel.app/",
-    },
-    {
-        title: 'FPGA Project',
+        title: 'Digital Design ',
+        subtitle: 'FPGA',
         tag: 'something',
         description: `Project using Diligent Basys 3 FPGA board`,
         image: navucsd,
-        link: "https://navigateucsd-hojmf88c8-sid-nairs-projects.vercel.app/"
+        link: "https://sidrnair.com",
+        githublink: "https://github.com/K00lA1D/FPGA"
       }
   ];
   
@@ -52,17 +51,30 @@ const ProjectCard = ({ project }) => {
   });
 
   return (
-    <a href={project.link} className="Project-Card-Link" ref={ref}>
-      <div className={`Project-Card ${inView ? 'visible' : ''}`} ref={ref}>
-        <div className="Project-Content">
-            <h3 className="Project-Header">{project.title}</h3>
-            <p>{project.description}</p>
-        </div>
-        <img src={project.image} alt={`${project.title} image`} className="Project-Image"/>
+    <div className={`Project-Card ${inView ? 'visible' : ''}`} ref={ref}>
+      <div className="Project-Content">
+        <h3 className="Project-Title">{project.title}</h3>
+        <h4 className="Project-Subheader">{project.subtitle}</h4>
+        <p>{project.description}</p>
       </div>
-    </a>
+      <div className="Button-Container">
+          <button 
+            onClick={() => window.open(project.githublink, '_blank', 'noopener,noreferrer')}
+            className="Project-Button"
+          >
+            <FontAwesomeIcon icon={faGithub} /> GitHub
+          </button>
+          <button 
+            onClick={() => window.open(project.link, '_blank', 'noopener,noreferrer')}
+            className="Project-Button"
+          >
+            Demo
+          </button>
+      </div>
+    </div>
   );
 };
+
 
 
 export default Projects;

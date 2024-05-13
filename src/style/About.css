@@ -1,7 +1,7 @@
 .About {
   display: flex;
   padding: 0px 100px 100px 100px;
-  text-align:center;
+  text-align: center;
   justify-content: center;
   align-items: center;
   color: #ffffff;
@@ -18,31 +18,32 @@
 }
 
 .About-Container .Intro-Text {
-  font-size: 1.5em;  /* Larger text size */
-  color: #00BFFF;  /* Bright blue color */
+  font-size: 1.5em;
+  color: #00BFFF;
 }
 
 .About-Container p {
-  font-size: 1.2em;  /* Slightly larger text size */
-  color: white;  /* Bright blue color */
+  font-size: 1.2em;
+  color: white;
 }
 
 .About-Container {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Increased space for text, reduced for image */
+  grid-template-columns: 2fr 1fr;
   gap: 2rem;
   padding: 20px;
+  width: 90vw; /* Set width to 90% of the viewport width */
+  max-width: 90vw; /* Ensure max-width is also 90% of the viewport width */
 }
 
-.Tabs-Container {
-  display: flex;
-  flex-direction: column;
+.Tab-Content ul {
+  list-style-position: inside;
+  padding-left: 20px; /* Adjust this value to align the dots properly */
 }
 
-.About-Header{
+.About-Header {
   font-size: 60px;
 }
-
 
 .Tab {
   display: flex;
@@ -52,38 +53,42 @@
 .Tab-Button {
   background: none;
   border: none;
-  color: inherit; /* Keeps the button text color consistent with the theme */
-  padding: 0.5rem 1rem;
+  color: inherit;
+  padding: 0.75rem 1.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  position: relative; /* Needed for positioning the ::after pseudo-element */
-  overflow: hidden; /* Keeps the pseudo-element within the button bounds */
+  position: relative;
+  overflow: hidden;
+  font-size: 1.25em;
 }
 
 .Tab-Button::after {
   content: '';
   position: absolute;
-  height: 2px; /* Height of the underline */
+  height: 2px;
   left: 0;
-  bottom: 0; /* Positioning the underline at the bottom of the button */
+  bottom: 0;
   width: 0;
-  background: #3498db; /* Using the hover color for the underline */
-  transition: width 0.3s ease; /* Animation effect timing */
-  transform-origin: left; /* Starts the animation from the left */
+  background: #3498db;
+  transition: width 0.3s ease;
+  transform-origin: left;
 }
 
 .Tab-Button:hover::after, .Tab-Button.active::after {
-  width: 100%; /* Expands the underline across the button width on hover */
+  width: 100%;
 }
 
 .Tab-Button:hover, .Tab-Button.active {
-  color: #3498db; /* Changes text color on hover and when active */
+  color: #3498db;
 }
+
 .Tab-Content {
   padding: 1rem;
   border-radius: 8px;
-  background: #424949;
-  min-height: 300px; /* Adjust based on your content to prevent resizing */
+  background: #002244;
+  min-height: 300px;
+  color: white;
+  text-align: left;
 }
 
 .Image-Container {
@@ -96,4 +101,9 @@
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+}
+
+.blue-text {
+  color: #00BFFF;
+  font-weight: bold;
 }

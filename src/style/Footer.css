@@ -1,15 +1,23 @@
 .footer {
-    width: 100%;
-    background-color: #333; /* Dark background, adjust to match your design */
-    color: #fff; /* White text color */
-    padding: 1rem 0; /* Vertical padding */
-    display: flex;
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically */
-    font-size: 0.875rem; /* Adjust font size as needed */
-    border-top: 1px solid #444; /* Optional border top for styling */
-  }
-  
-  .footer-content {
-    text-align: center;
-  }
+  background-color: #002244; /* Adjust the background color as needed */
+  color: #00BFFF;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.footer-content {
+  display: inline-block;
+  align-items: center;
+}
+
+.footer-link {
+  color: #00BFFF;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #1E90FF; /* Adjust the hover color if needed */
+}

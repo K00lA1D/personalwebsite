@@ -1,5 +1,3 @@
-/* Contact.css */
-
 .Contact {
     display: flex;
     flex-direction: column;
@@ -11,7 +9,7 @@
     opacity: 0;
     transform: translateX(400px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    padding: 0px 100px 100px 100px; /* Restored bottom padding */
+    padding: 0px 100px 100px 100px;
 }
 
 .Contact.visible {
@@ -20,7 +18,8 @@
 }
 
 .Contact-Header {
-    font-size: 60px;
+    font-size: 30px;
+    color: white;
     padding: 50px 0px 50px 0px;
 }
 
@@ -29,17 +28,22 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 70%; /* Reduced overall width */
-    max-width: 1200px; /* Adding a max-width can help control stretching */
+    width: 70%;
+    max-width: 1200px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background: #333;
-    height: auto; /* Ensure the container can grow in height */
+    background: #002244;
+    height: fit-content; /* Changed from auto to fit-content */
+    transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.Contact-Container:hover {
+    box-shadow: 0 0 5px 5px rgba(0, 191, 255, 0.6);
 }
 
 .Contact-Form, .Contact-Info {
-    width: 50%; /* Maintain side by side layout */
+    width: 50%;
     text-align: center;
 }
 
@@ -47,29 +51,54 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.Contact-Input, .Contact-Button {
-    height: 60px; /* Increased height */
-    width: 80%; /* Slightly bigger */
-    font-size: 18px; /* Larger text inside inputs and button */
-    border: 2px solid transparent; /* Default border */
-    border-radius: 10px;
-    padding: 10px; /* Added for better text positioning */
-    transition: border-color 0.3s; /* Smooth transition for hover effect */
+.Contact-Input, .Contact-Button, .Download-Button {
+    background: none;
+    border: 2px solid #00BFFF;
+    color: #00BFFF;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.Contact-Button:hover, .Download-Button:hover {
+    background-color: #00BFFF;
+    color: #002244;
 }
 
 .Contact-Input {
-    margin-bottom: 15px; /* Increase bottom margin for spacing between inputs */
+    background-color: white;
+    color: black;
+    height: 50px; /* Reduced height */
+    width: 80%;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-.Contact-Input:hover, .Contact-Button:hover {
-    border-color: #3498db; /* Blue border on hover */
+.contact-textarea {
+    height: 100px;
+    resize: none;
 }
 
-.Contact-Info p, .social-links a, .Contact-Button {
-    font-size: 1.5em; /* Larger text for contact info and button */
+.Contact-Info {
+    flex: 1;
+    padding: 20px;
+    background: #001122;
+    border-radius: 10px;
+    color: #00BFFF;
 }
+
+.Contact-Info p, .social-links a {
+    font-size: 1.2em; /* Adjusted from 1.5em to smaller size */
+}
+
 .social-links a {
     margin: 0 5px;
     color: white;
@@ -80,25 +109,18 @@
 }
 
 .social-links {
-    font-size: 1.5em; /* Larger icons */
+    font-size: 1.5em;
 }
 
-.social-links:hover {
-    color: #3498db;
+.char-count {
+    font-size: 12px;
+    color: #00BFFF;
+    text-align: right;
+    width: 80%;
+    margin-bottom: 10px;
+    display: none;
 }
 
-.Download-Button {
-    background-color: #3498db; /* Blue background */
-    color: white;
-    cursor: pointer;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px; /* Text size */
-    margin-top: 20px; /* Space above the button */
-    transition: background-color 0.3s;
-}
-
-.Download-Button:hover {
-    background-color: #2980b9; /* Darker blue on hover */
+.contact-textarea:focus + .char-count {
+    display: block;
 }
