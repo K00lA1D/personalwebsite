@@ -1,5 +1,6 @@
 import React from 'react';
 import './style/Projects.css'
+//import Basys3Demo from './Basys3_FullAdder_Demo.mp4';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import navucsd from './NavUCSD.png'
@@ -22,14 +23,24 @@ const Projects = () => {
       githublink: "https://github.com/K00lA1D/navigateucsd"
     },
     {
-        title: 'Digital Design ',
-        subtitle: 'FPGA',
-        tag: 'something',
-        description: `Project using Diligent Basys 3 FPGA board`,
-        image: navucsd,
-        link: "https://sidrnair.com",
-        githublink: "https://github.com/K00lA1D/FPGA"
-      }
+      title: 'Digital Design Projects',
+      subtitle: 'FPGA',
+      tag: 'something',
+      description: `Implemented 8-bit counter, 2-to-1 multiplexer, and 4-bit full adder using Verilog. Programmed into FPGA with Vivado. Fundamental digital logic and FPGA programming`,
+      image: navucsd,
+      link: '/multi_video_player.html',
+      githublink: "https://github.com/K00lA1D/FPGA"
+    },
+    {
+      title: 'Advanced RISC V Processor Design',
+      subtitle: 'FPGA',
+      tag: 'something',
+      description: `FPGA implementation of a RISC-V processor using SystemVerilog and Vivado. Features components like control unit, ALU, memory, registers, and program counter. Supports R-type instructions (add, sub, and, or, xor, slt), I-type instructions, load (lb, lw, lh, lhu), and store (sb, sw, sh) operations.`,
+      image: navucsd,
+      link: '/multi_video_player.html',
+      githublink: "https://github.com/K00lA1D/FPGA/tree/main/Basys3/RISCV"
+
+    }
   ];
   
   return (

@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Sid Nair's Personal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to Sid Nair's personal website! This site showcases my projects, experiences, and skills in software engineering, data science, and more. Explore to learn more about my background, view my portfolio, and get in touch with me.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [About](#about)
+- [Projects](#projects)
+- [Experience](#experience)
+- [Contact](#contact)
+- [License](#license)
 
-### `npm start`
+## About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This website serves as a digital portfolio for Sid Nair, highlighting my academic background, professional experiences, and personal projects. Here, you can find detailed information about my skills, interests, and achievements.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Projects
 
-### `npm test`
+### Navigate UCSD
+- **Description:** Full-Stack application for navigating UCSD given a schedule.
+- **Technologies:** React, Node.js, Azure Maps, Vercel.
+- [GitHub Repository](https://github.com/K00lA1D/navigateucsd)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Digital Design Projects
+- **Description:** Implemented 8-bit counter, 2-to-1 multiplexer, and 4-bit full adder using Verilog. Programmed into FPGA with Vivado.
+- **Technologies:** Verilog, Vivado, FPGA.
+- [GitHub Repository](https://github.com/K00lA1D/FPGA)
 
-### `npm run build`
+### Advanced RISC V Processor Design
+- **Description:** FPGA implementation of a RISC-V processor using SystemVerilog and Vivado. Features components like control unit, ALU, memory, registers, and program counter.
+- **Technologies:** SystemVerilog, Vivado, FPGA.
+- [GitHub Repository](https://github.com/K00lA1D/FPGA/tree/main/Basys3/RISCV)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Experience
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I have worked on various projects and internships that have honed my skills in software engineering and data science. Detailed information about my professional experiences can be found on the website.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contact
 
-### `npm run eject`
+Feel free to reach out to me through the contact form on the website or connect with me on [LinkedIn](https://www.linkedin.com/in/sidnair/).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

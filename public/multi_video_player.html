@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPGA Digital Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="SymbolS.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: #002244; /* Dark blue background */
+            color: white; /* White text */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .common-description {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #003366; /* Slightly lighter blue for sections */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .common-description:hover {
+            box-shadow: 0 0 10px 5px rgba(0, 191, 255, 0.6);
+        }
+
+        .video-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #003366; /* Slightly lighter blue for sections */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-section:hover {
+            box-shadow: 0 0 10px 5px rgba(0, 191, 255, 0.6);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: white; /* White for headers */
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="common-description">
+            <h2>Common Implementation Process</h2>
+            <p>
+                For all these projects, I used AMD Vivado software to perform behavioral synthesis, design simulation, implementation, and bitstream generation. Each design was programmed onto a Digilent Basys 3 FPGA board. The process involved creating Verilog/SystemVerilog modules, developing testbenches, and utilizing constraint files to ensure accurate performance.
+            </p>
+        </div>
+
+        <div class="video-section">
+            <h2>4Bit Full Adder</h2>
+            <video controls>
+                <source src="Basys3_FullAdder_Demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>
+                This 4Bit Full Adder module performs binary addition of two 4-bit numbers. It uses 8 switches for inputs (4 for each number) and 5 LEDs to display the output (4 for the sum and 1 for the carry out). The design involved creating a full adder circuit using basic logic gates and cascading them to form a 4-bit adder.
+            </p>
+        </div>
+
+        <div class="video-section">
+            <h2>2to1 Mux</h2>
+            <video controls>
+                <source src="Basys3_2to1Mux_Demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>
+                The 2to1 Mux (Multiplexer) selects one of the two input signals based on a single select signal. It uses 2 switches for the inputs, 1 switch for the select signal, and 1 LED for the output. The implementation included designing the multiplexer logic and verifying its functionality through simulation before programming it onto the FPGA.
+            </p>
+        </div>
+
+        <div class="video-section">
+            <h2>8Bit Counter</h2>
+            <video controls>
+                <source src="Basys3_8BitCounter_Demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>
+                This 8Bit Counter was developed through a comprehensive process using AMD Vivado. The onboard clock was processed to divide (slow) it down to a frequency that is visible to the human eye. The workflow included behavioral synthesis, design simulation, implementation, and bitstream generation, culminating in the programming of the FPGA to demonstrate the designed counter's functionality.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

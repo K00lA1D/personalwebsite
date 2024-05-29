@@ -70,6 +70,7 @@
 
 .Project-Content {
     overflow: hidden;
+    flex-grow: 1;
     padding: 10px;
 }
 
