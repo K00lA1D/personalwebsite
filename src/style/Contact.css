@@ -34,7 +34,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     background: #002244;
-    height: fit-content; /* Changed from auto to fit-content */
+    height: fit-content;
     transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
 }
 
@@ -73,7 +73,7 @@
 .Contact-Input {
     background-color: white;
     color: black;
-    height: 50px; /* Reduced height */
+    height: 50px;
     width: 80%;
     font-size: 15px;
     border-radius: 10px;
@@ -96,11 +96,19 @@
 }
 
 .Contact-Info p, .social-links a {
-    font-size: 1.2em; /* Adjusted from 1.5em to smaller size */
+    font-size: 1.2em;
+    margin-bottom: 10px; /* Add margin to create space between items */
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-links a {
-    margin: 0 5px;
+    margin: 0 10px; /* Adjust margin to align items */
+    font-size: 2em; /* Increase the size of the icons */
     color: white;
 }
 
@@ -108,8 +116,10 @@
     color: #3498db;
 }
 
-.social-links {
-    font-size: 1.5em;
+.Download-Button {
+    margin-left: 10px; /* Adjust margin to align items */
+    padding: 10px 20px; /* Adjust padding to make the button smaller */
+    font-size: 1em; /* Adjust font size */
 }
 
 .char-count {

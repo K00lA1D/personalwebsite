@@ -86,9 +86,11 @@
   padding: 1rem;
   border-radius: 8px;
   background: #002244;
-  min-height: 300px;
+  min-height: 300px; /* Existing min-height */
   color: white;
   text-align: left;
+  height: 400px; /* Set a fixed height to accommodate the largest content */
+  overflow-y: auto; /* Add this to allow scrolling if content overflows */
 }
 
 .Image-Container {

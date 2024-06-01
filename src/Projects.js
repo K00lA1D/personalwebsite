@@ -17,7 +17,13 @@ const Projects = () => {
       title: 'Navigate UCSD',
       subtitle: 'Full-Stack Application',
       tag: 'something',
-      description: `Web based application for navigate UCSD given schedule`,
+      description: `
+      <ul>
+        <li>Designed front/backend application through React/Javascript</li>
+        <li>Utilized Microsoft Azure Map API to animate user-defined, point-to-point paths across interactive schedule input</li>
+        <li>Originally developed as 2024 Dimonad Hacks hackathon submission, later expanded into a complete project</li>
+      </ul>
+      `,
       image: navucsd,
       link: "https://navigateucsd.com/",
       githublink: "https://github.com/K00lA1D/navigateucsd"
@@ -26,16 +32,29 @@ const Projects = () => {
       title: 'Digital Design Projects',
       subtitle: 'FPGA',
       tag: 'something',
-      description: `Implemented 8-bit counter, 2-to-1 multiplexer, and 4-bit full adder using Verilog. Programmed into FPGA with Vivado. Fundamental digital logic and FPGA programming`,
+      description: `
+      <ul>
+        <li>Implemented Verilog modules for 8-bit counter, 2-to-1 multiplexer, and 4-bit full adder</li>
+        <li>Simulated, synthesized, and programmed bitstreams into FPGA through Vivado</li>
+        <li>Utilized switches, buttons, and LEDs for real-time user interaction</li>
+      </ul>
+      `,
       image: navucsd,
       link: '/multi_video_player.html',
       githublink: "https://github.com/K00lA1D/FPGA"
     },
     {
-      title: 'Advanced RISC V Processor Design',
+      title: 'RISC V Processor Design',
       subtitle: 'FPGA',
       tag: 'something',
-      description: `FPGA implementation of a RISC-V processor using SystemVerilog and Vivado. Features components like control unit, ALU, memory, registers, and program counter. Supports R-type instructions (add, sub, and, or, xor, slt), I-type instructions, load (lb, lw, lh, lhu), and store (sb, sw, sh) operations.`,
+      description: `
+      <ul>
+        <li>RISC-V processor RTL model with modular design of components (Control Unit, ALU, Memory, Register, Program Counter)</li>
+        <li>Supports all modern RISC-V register, immediate, load, and store instructions</li>
+        <li>Simulated, synthesized, and programmed bitstreams into FPGA through Vivado</li>
+        <li>LED indicators for real-time interaction and on-board reset functionality</li>
+      </ul>
+      `,
       image: navucsd,
       link: '/multi_video_player.html',
       githublink: "https://github.com/K00lA1D/FPGA/tree/main/Basys3/RISCV"
@@ -66,7 +85,7 @@ const ProjectCard = ({ project }) => {
       <div className="Project-Content">
         <h3 className="Project-Title">{project.title}</h3>
         <h4 className="Project-Subheader">{project.subtitle}</h4>
-        <p>{project.description}</p>
+        <div dangerouslySetInnerHTML={{ __html: project.description }} />
       </div>
       <div className="Button-Container">
           <button 

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.WorkExperience{
+html {
+    font-size: 14px; /* Adjust this to a smaller base font size for the entire app */
+}
+
+.WorkExperience {
     text-align: left;
     padding: 0px 100px 100px 100px;
     background: transparent;
@@ -11,19 +15,19 @@
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.WorkExperience.visible{
+.WorkExperience.visible {
     opacity: 1;
     transform: translateX(0);
 }
 
-.WorkExperience-Header{
-    font-size: 30px;
+.WorkExperience-Header {
+    font-size: 2rem; /* Adjusted from 30px */
     color: white;
     padding: 0px 0px 25px 0px;
 }
 
-.WorkExperience-SubHeader{
-    font-size: 15px;
+.WorkExperience-SubHeader {
+    font-size: 0.875rem; /* Adjusted from 15px */
     color: #00BFFF;
     padding: 0px 0px 25px 0px;
 }
@@ -32,14 +36,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates a responsive number of column tracks */
     grid-template-rows: minmax(100px, auto);
-    gap: 20px; 
+    gap: 20px;
     align-items: stretch;
 }
 
 .WorkExperience-Card-Link {
     text-decoration: none;
-    color: inherit; 
-    display: block; 
+    color: inherit;
+    display: block;
 }
 
 .WorkExperience-Card {
@@ -62,28 +66,36 @@
 
 .WorkExperience-Card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 5px 5px rgba(0, 191, 255, 0.6); 
+    box-shadow: 0 0 5px 5px rgba(0, 191, 255, 0.6);
 }
 
-.WorkExperience-Image{
+.WorkExperience-Card ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.WorkExperience-Card li {
+    margin-bottom: 8px;
+}
+
+.WorkExperience-Image {
     width: 50px;
     height: 50px;
     border-radius: 10px;
 }
 
-.WorkExperience-Content{
+.WorkExperience-Content {
     overflow: hidden;
     color: white;
 }
 
-
-.WorkExperience-Link{
+.WorkExperience-Link {
     background: none;
     border: none;
-    color: inherit; 
+    color: inherit;
     margin: 0 1rem;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 0.875rem; /* Adjust this to decrease button text size */
     cursor: pointer;
     position: relative;
     overflow: hidden;

@@ -1,6 +1,6 @@
 # Sid Nair's Personal Website
 
-Welcome to Sid Nair's personal website! This site showcases my projects, experiences, and skills in software engineering, data science, and more. Explore to learn more about my background, view my portfolio, and get in touch with me.
+Welcome to my personal website! This site showcases my projects, experiences, and skills in hardware design, verification, software engineering, and more. Explore to learn more about my background, view my portfolio, and get in touch with me.
 
 ## Table of Contents
 
@@ -12,12 +12,12 @@ Welcome to Sid Nair's personal website! This site showcases my projects, experie
 
 ## About
 
-This website serves as a digital portfolio for Sid Nair, highlighting my academic background, professional experiences, and personal projects. Here, you can find detailed information about my skills, interests, and achievements.
+This website serves as a digital portfolio, highlighting my academic background, professional experiences, and personal projects. Here, you can find detailed information about my skills, interests, and achievements.
 
 ## Projects
 
 ### Navigate UCSD
-- **Description:** Full-Stack application for navigating UCSD given a schedule.
+- **Description:** Designed front/backend application utilizing Microsoft Azure Map API to animate user-defined, point-to-point paths across a college campus based on an interactive schedule input.
 - **Technologies:** React, Node.js, Azure Maps, Vercel.
 - [GitHub Repository](https://github.com/K00lA1D/navigateucsd)
 
@@ -33,11 +33,11 @@ This website serves as a digital portfolio for Sid Nair, highlighting my academi
 
 ## Experience
 
-I have worked on various projects and internships that have honed my skills in software engineering and data science. Detailed information about my professional experiences can be found on the website.
+I have worked on various projects and internships that have honed my skills in hardware design and software engineering. Detailed information about my professional experiences can be found on the website.
 
 ## Contact
 
-Feel free to reach out to me through the contact form on the website or connect with me on [LinkedIn](https://www.linkedin.com/in/sidnair/).
+Feel free to reach out to me through the contact form on the website or connect with me on [LinkedIn](https://www.linkedin.com/in/siddhartha-n-0b5601226).
 
 ## License
 
